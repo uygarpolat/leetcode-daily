@@ -1,2 +1,3 @@
 # leetcode-daily
-Leetcode's daily questions, solved in Python.
+
+A personal Python project tackling one new LeetCode problem each day—designed to reinforce consistent practice, explore diverse algorithms and patterns, and sharpen problem-solving skills.
