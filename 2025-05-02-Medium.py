@@ -47,9 +47,7 @@ class Solution:
 
 		def handle_left(arr, i, before_char, before_index):
 			if arr[i] == 'R':
-				if before_char == 'L':
-					return
-				else:
+				if before_char == 'R':
 					fill_range(arr, before_index, i-before_index, before_char)
 			else:
 				if before_char == 'L':
@@ -64,6 +62,7 @@ class Solution:
 		before_char = 'L'
 		before_index = 0
 		i = 0
+		
 		while i < len(arr):
 
 			c = arr[i]
@@ -73,6 +72,7 @@ class Solution:
 				before_char = c
 				before_index = i
 			i += 1
+
 		if before_char == 'R':
 			fill_range(arr, before_index, len(arr)-before_index, before_char)
 			
