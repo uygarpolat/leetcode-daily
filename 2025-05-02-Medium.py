@@ -61,17 +61,12 @@ class Solution:
 
 		before_char = 'L'
 		before_index = 0
-		i = 0
-		
-		while i < len(arr):
 
-			c = arr[i]
-
+		for i, c in enumerate(arr):
 			if c == 'L' or c == 'R':
 				handle_left(arr, i, before_char, before_index)
 				before_char = c
 				before_index = i
-			i += 1
 
 		if before_char == 'R':
 			fill_range(arr, before_index, len(arr)-before_index, before_char)
