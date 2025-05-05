@@ -20,14 +20,17 @@ Constraints:
 """
 
 class Solution:
-	def numTilings(self, n: int) -> int:
-		result = 1001 * [0]
-		result[0] = 1
-		result[1] = 1
-		result[2] = 2
-		for i in range(3, n + 1):
-			result[i] = result[i-1] * 2 + result[i-3]
-		return result[n] % 1000000007
+    def numTilings(self, n: int) -> int:
+        len = n
+        if len < 3:
+            len = 3
+        result = (len+1) * [0]
+        result[0] = 1
+        result[1] = 1
+        result[2] = 2
+        for i in range(3, len + 1):
+            result[i] = result[i-1] * 2 + result[i-3]
+        return result[n] % 1000000007
 
 def main():
 	solution = Solution()
