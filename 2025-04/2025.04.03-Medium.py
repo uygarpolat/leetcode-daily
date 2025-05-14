@@ -32,12 +32,17 @@ from typing import List
 from itertools import combinations
 
 class Solution:
-	def maximumTripletValue(self, nums: List[int]) -> int: 
-		result = -1
-		for a, b, c in combinations(nums, 3):
-			if result < (a-b)*c:
-				result = (a-b)*c
-		return max(0, result)
+    def maximumTripletValue(self, nums: List[int]) -> int:
+        n = len(nums)
+        prefix_max = nums[0]
+        best_diff = float('-inf')
+        answer = 0
+        for k in range(2, n):
+            j = k - 1
+            best_diff = max(best_diff, prefix_max - nums[j])
+            prefix_max = max(prefix_max, nums[j])
+            answer = max(answer, best_diff * nums[k])
+        return answer
 
 def main():
 	solution = Solution()
