@@ -40,9 +40,25 @@ queries[i].length == 2
 from typing import List
 
 class Solution:
-    def isZeroArray(self, nums: List[int], queries: List[List[int]]) -> bool:
-        # To be implemented
-        return True
+	def isZeroArray(self, nums: List[int], queries: List[List[int]]) -> bool:
+        
+		diff = [0] * (len(nums)+1)
+		cover = [0] * len(nums)
+        
+		for left, right in queries:
+			diff[left] += 1
+			diff[right+1] -= 1
+
+		cover[0] = diff[0]
+
+		for i in range(1, len(cover)):
+			cover[i] = cover[i-1] + diff[i]
+		
+		for i in range(len(nums)):
+			if cover[i] < nums[i]:
+				return False
+			
+		return True
     
 def main():
 	solution = Solution()
@@ -55,6 +71,8 @@ def main():
 	queries = [[1,3],[0,2]]
 	result = solution.isZeroArray(nums, queries)
 	assert(result == False)
+
+	print("✅ All tests passed!")
 
 if __name__ == "__main__":
      main()
