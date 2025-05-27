@@ -36,8 +36,8 @@ We return 0 - 15 = -15 as the answer.
 class Solution:
 	def differenceOfSums(self, n: int, m: int) -> int:
 		def get_sum(n):
-			return n * (n+1) / 2	
-		return int(get_sum(n) - 2 * m * get_sum(n//m))
+			return n * (n+1) // 2	
+		return get_sum(n) - 2 * m * get_sum(n//m)
         
 def main():
 	solution = Solution()
