@@ -18,19 +18,10 @@ Explanation: There are 10 ways to distribute 3 candies such that no child gets m
 Constraints:
 1 <= n <= 10^6
 1 <= limit <= 10^6
-
-Hint 1
-We can enumerate the number of candies of one particular child, let it be i which means 0 <= i <= min(limit, n).
-Hint 2
-Suppose the 2nd child gets j candies. Then 0 <= j <= limit and i + j <= n.
-Hint 3
-The 3rd child will hence get n - i - j candies and we should have 0 <= n - i - j <= limit.
-Hint 4
-After some transformations, for each i, we have max(0, n - i - limit) <= j <= min(limit, n - i), each j corresponding to a solution. So the number of solutions for some i is max(min(limit, n - i) - max(0, n - i - limit) + 1, 0). Sum the expression for every i in [0, min(n, limit)].
 """
 class Solution:
 	def distributeCandies(self, n: int, limit: int) -> int:
-		
+
 		def n_choose_2(x):
 			if x >= 2:
 				return (x * (x - 1)) // 2 
