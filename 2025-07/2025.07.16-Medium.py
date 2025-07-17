@@ -40,11 +40,8 @@ class Solution:
 		currentZero = 0
 		currentOne = 1
 
-		for i, num in enumerate(nums):
-			if num % 2 == 0:
-				result[0] += 1
-			else:
-				result[1] += 1
+		for num in nums:
+			result[num % 2] += 1
 			
 			if num % 2 == currentZero:
 				result[2] += 1
