@@ -34,20 +34,22 @@ s consists only of lowercase English letters.
 class Solution:
 	def makeFancyString(self, s: str) -> str:
 
-		letter = s[0]
+		s_list = list(s)
+
+		letter = s_list[0]
 		i = 1
 		counter = 1
-		while i < len(s):
-			if s[i] == letter:
+		while i < len(s_list):
+			if s_list[i] == letter:
 				counter += 1
 				if counter >= 3:
-					s = s[:i] + s[i+1:]
+					s_list.pop(i)
 					i -= 1
 			else:
 				counter = 1
-			letter = s[i]
+			letter = s_list[i]
 			i += 1
-		return s
+		return "".join(s_list)
 	
 def main():
 	solution = Solution()
