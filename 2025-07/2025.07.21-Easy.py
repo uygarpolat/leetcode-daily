@@ -33,23 +33,12 @@ s consists only of lowercase English letters.
 """
 class Solution:
 	def makeFancyString(self, s: str) -> str:
-
-		s_list = list(s)
-
-		letter = s_list[0]
-		i = 1
-		counter = 1
-		while i < len(s_list):
-			if s_list[i] == letter:
-				counter += 1
-				if counter >= 3:
-					s_list.pop(i)
-					i -= 1
-			else:
-				counter = 1
-			letter = s_list[i]
-			i += 1
-		return "".join(s_list)
+		result = []
+		for c in s:
+			if len(result) >= 2 and result[-1] == result[-2] == c:
+				continue
+			result.append(c)
+		return "".join(result)
 	
 def main():
 	solution = Solution()
