@@ -2,17 +2,4 @@
 
 A personal Python project tackling one new LeetCode problem each day, designed to reinforce consistent practice, explore diverse algorithms and patterns, and sharpen problem-solving skills.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/489ad2e2-188c-48f9-83db-6c277174440e"
-       alt="leetcode2"
-       width="300"/>
-  <img src="https://github.com/user-attachments/assets/129435f2-68f5-4dfc-9aa6-9281b15083c3"
-       alt="leetcode2"
-       width="300"/>
-  <img src="https://github.com/user-attachments/assets/30f8ceae-4567-4429-9277-f0efbc015b26"
-       alt="leetcode3"
-       width="300"/>
-  <img src="https://github.com/user-attachments/assets/d6c7ef3c-e90f-4ca5-9f7d-8dadcf1539b2"
-       alt="leetcode4"
-       width="300"/>
-</p>
+![Screenshot 2025-07-21 at 9 09 16](https://github.com/user-attachments/assets/16384e84-11cc-4d8a-ab64-ff92bbc582cb)
