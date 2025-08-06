@@ -2,6 +2,6 @@
 
 A personal Python project tackling one new LeetCode problem each day, designed to reinforce consistent practice, explore diverse algorithms and patterns, and sharpen problem-solving skills.
 
-My streak as of 05.08.2025:
+My streak as of 06.08.2025:
 
-![Screenshot 2025-08-05 at 10 20 36](https://github.com/user-attachments/assets/2a0ad52e-822c-4b83-ac81-044e9bc657f6)
+![Screenshot 2025-08-06 at 12 24 41](https://github.com/user-attachments/assets/25ae9b47-1143-458b-a7f8-1ed6b146b229)
