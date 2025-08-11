@@ -66,8 +66,7 @@ class Solution:
 
 			return node, index
 		
-		root, _ = dfs(0, traversal)
-		return root
+		return dfs(0, traversal)[0]
 
 def main():
 	solution = Solution()
