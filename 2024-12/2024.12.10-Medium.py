@@ -1,5 +1,5 @@
 """
-2982. Find Longest Special Substring That Occurs Thrice II
+2981. Find Longest Special Substring That Occurs Thrice I
 
 You are given a string s that consists of lowercase English letters.
 
@@ -27,7 +27,7 @@ Explanation: The longest special substring which occurs thrice is "a": substring
 It can be shown that the maximum length achievable is 1.
 
 Constraints:
-3 <= s.length <= 5 * 10^5
+3 <= s.length <= 50
 s consists of only lowercase English letters.
 """
 import heapq
