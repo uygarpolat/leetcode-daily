@@ -33,7 +33,7 @@ class Solution:
 			S = num1 - k * num2
 			if S <= 0 and num2 > 0:
 				break
-			elif k <= S and S.bit_count() <= k:
+			elif S.bit_count() <= k <= S:
 				return k
 		return -1
 
