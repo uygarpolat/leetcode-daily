@@ -44,7 +44,6 @@ def main():
 	assert solution.maxChunksToSorted([4,3,2,1,0]) == 1
 	assert solution.maxChunksToSorted([1,0,2,3,4]) == 4
 	assert solution.maxChunksToSorted([3,0,1,2,4]) == 2
-
 	print("✅ All tests passed!")
 
 if __name__ == "__main__":
