@@ -23,19 +23,13 @@ from typing import List
 
 class Solution:
 	def sumZero(self, n: int) -> List[int]:
-		if n == 1:
-			return [0]
-		if n == 2:
-			return [-42, 42]
-		result = [x for x in range(n-1)]
-		result.append(-(n-1) * (n-2) // 2)
-		return result
+		return list(range(1, n)) + [-(n - 1) * n // 2]
 
 def main():
 	solution = Solution()
-	assert solution.sumZero(5) == [0,1,2,3,-6]
-	assert solution.sumZero(3) == [0,1,-1]
-	assert solution.sumZero(1) == [42]
+	assert solution.sumZero(5) == [1,2,3,4,-10]
+	assert solution.sumZero(3) == [1,2,-3]
+	assert solution.sumZero(1) == [0]
 	print("✅ All tests passed!")
 
 if __name__ == "__main__":
