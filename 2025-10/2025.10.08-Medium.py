@@ -50,10 +50,7 @@ class Solution:
 					lo = mid + 1
 			return n - lo
 		
-		result = []
-		for spell in spells:
-			result.append(getPairAmount(spell))
-		return result
+		return [getPairAmount(spell) for spell in spells]
 	
 def main():
 	solution = Solution()
