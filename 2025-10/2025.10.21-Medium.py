@@ -1,0 +1,81 @@
+"""
+3346. Maximum Frequency of an Element After Performing Operations I
+
+You are given an integer array nums and two integers k and numOperations.
+
+You must perform an operation numOperations times on nums, where in each operation you:
+
+Select an index i that was not selected in any previous operations.
+Add an integer in the range [-k, k] to nums[i].
+Return the maximum possible frequency of any element in nums after performing the operations.
+
+Example 1:
+Input: nums = [1,4,5], k = 1, numOperations = 2
+Output: 2
+Explanation:
+We can achieve a maximum frequency of two by:
+Adding 0 to nums[1]. nums becomes [1, 4, 5].
+Adding -1 to nums[2]. nums becomes [1, 4, 4].
+
+Example 2:
+Input: nums = [5,11,20,20], k = 5, numOperations = 1
+Output: 2
+Explanation:
+We can achieve a maximum frequency of two by:
+Adding 0 to nums[1].
+
+Constraints:
+1 <= nums.length <= 10^5
+1 <= nums[i] <= 10^5
+0 <= k <= 10^5
+0 <= numOperations <= nums.length
+"""
+from typing import List
+
+class Solution:
+	def maxFrequency(self, nums: List[int], k: int, numOperations: int) -> int:
+
+		nums.sort()
+		n = len(nums)
+
+		cover_max = 0
+		L2 = 0
+		for R2 in range(n):
+			while nums[R2] - nums[L2] > 2 * k:
+				L2 += 1
+			cover_max = max(cover_max, R2 - L2 + 1)
+
+		L = 0
+		R = 0
+		i = 0
+		best_existing = 0
+
+
+		while i < n:
+
+			t = nums[i]
+			j = i
+			while j < n and nums[j] == t:
+				j += 1
+			cnt_t = j - i
+
+			while R < n and nums[R] <= t + k:
+				R += 1
+			while L < n and nums[L] < t - k:
+				L += 1
+
+			window_size = R - L
+			best_existing = max(best_existing, min(window_size, cnt_t + numOperations))
+
+			i = j
+
+		return max(min(numOperations, cover_max), best_existing)
+
+def main():
+	solution = Solution()
+	assert solution.maxFrequency([1,4,5], 1, 2) == 2
+	assert solution.maxFrequency([5,11,20,20], 5, 1) == 2
+	print("✅ All tests passed!")
+
+if __name__ == "__main__":
+	main()
