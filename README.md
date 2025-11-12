@@ -6,6 +6,6 @@ My all time Leetcode stats:
 
 [![LeetCode Stats](https://leetcard.jacoblin.cool/uygarpolat?theme=dark&ext=contest&ext=heatmap)](https://leetcode.com/uygarpolat/)
 
-My solve streak as of 11.11.2025:
+My solve streak as of 12.11.2025:
 
-![Screenshot 2025-11-11 at 20 41 22](https://github.com/user-attachments/assets/bd7f117f-35b6-495f-a252-1f41ec4e6fb1)
+![Screenshot 2025-11-12 at 21 04 14](https://github.com/user-attachments/assets/f000b46e-dbbf-464e-b563-ab7b97c5089f)
