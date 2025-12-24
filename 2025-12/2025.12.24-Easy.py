@@ -28,17 +28,16 @@ The input is generated such that it's possible to redistribute packs of apples i
 """
 
 from typing import List
+import bisect
 
 
 class Solution:
     def minimumBoxes(self, apple: List[int], capacity: List[int]) -> int:
         sum_apple = sum(apple)
         capacity.sort(reverse=True)
-        res = 0
-        for i, c in enumerate(capacity):
-            res += c
-            if res >= sum_apple:
-                return i + 1
+        prev = 0
+        prefix = [(prev := prev + c) for c in capacity]
+        return bisect.bisect_left(prefix, sum_apple) + 1
 
 
 def main():
