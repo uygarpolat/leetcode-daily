@@ -1,0 +1,51 @@
+"""
+1351. Count Negative Numbers in a Sorted Matrix
+
+Given a m x n matrix grid which is sorted in non-increasing order both row-wise and column-wise, return the number of negative numbers in grid.
+
+Example 1:
+Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+Output: 8
+Explanation: There are 8 negatives number in the matrix.
+
+Example 2:
+Input: grid = [[3,2],[1,0]]
+Output: 0
+
+Constraints:
+m == grid.length
+n == grid[i].length
+1 <= m, n <= 100
+-100 <= grid[i][j] <= 100
+
+Follow up: Could you find an O(n + m) solution?
+"""
+
+from typing import List
+
+
+class Solution:
+    def countNegatives(self, grid: List[List[int]]) -> int:
+        n = len(grid)
+        m = len(grid[0])
+        result = 0
+        i = 0
+        j = m - 1
+        while i < n and j >= 0:
+            if grid[i][j] < 0:
+                result += n - i
+                j -= 1
+            else:
+                i += 1
+        return result
+
+
+def main():
+    solution = Solution()
+    assert solution.countNegatives([[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]]) == 8
+    assert solution.countNegatives([[3, 2], [1, 0]]) == 0
+    print("✅ All tests passed!")
+
+
+if __name__ == "__main__":
+    main()
