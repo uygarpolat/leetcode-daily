@@ -37,12 +37,12 @@ class TreeNode:
 class Solution:
     def maxLevelSum(self, root: Optional[TreeNode]) -> int:
         dq = deque([root])
-        result = (float("-inf"), 0, 0)
+        result = (float("-inf"), 0)
         level = 0
         while dq:
             local_result = 0
             len_dq = len(dq)
-            level += 1
+            level -= 1
             for i in range(len_dq):
                 curr = dq.popleft()
                 local_result += curr.val
@@ -50,8 +50,8 @@ class Solution:
                     dq.append(curr.left)
                 if curr.right:
                     dq.append(curr.right)
-            result = max(result, (local_result, -level, level))
-        return result[2]
+            result = max(result, (local_result, level))
+        return -result[1]
 
 
 def main():
