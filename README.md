@@ -8,4 +8,4 @@ My all time Leetcode stats:
 
 My solve streak as of 06.01.2026:
 
-![Screenshot 2026-01-06 at 19 33 06](https://github.com/user-attachments/assets/45b6c42f-6dbb-4e5e-aea9-4687a36f3485)
+![Screenshot 2026-01-07 at 19 16 04](https://github.com/user-attachments/assets/08bc0f2d-70d8-4a99-94b2-3fa304eeb94e)
