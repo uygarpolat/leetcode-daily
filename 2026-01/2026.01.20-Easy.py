@@ -32,7 +32,6 @@ Constraints:
 nums[i] is a prime number.
 """
 
-import enum
 from typing import List
 
 
