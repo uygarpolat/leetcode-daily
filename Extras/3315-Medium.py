@@ -1,5 +1,5 @@
 """
-3314. Construct the Minimum Bitwise Array II
+3315. Construct the Minimum Bitwise Array II
 
 You are given an array nums consisting of n prime integers.
 
